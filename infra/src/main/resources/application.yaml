@@ -5,7 +5,7 @@ management:
     port: '8081'
 spring:
   application:
-    name: order-api
+    name: accounting-api
   cloud:
     config:
       enabled: false

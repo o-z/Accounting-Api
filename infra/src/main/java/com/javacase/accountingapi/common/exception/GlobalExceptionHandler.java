@@ -17,8 +17,8 @@ public class GlobalExceptionHandler {
   private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
   @ExceptionHandler(value = AccountingApiException.class)
-  public ResponseEntity<AccountingApiException> orderApiExceptionHandler(AccountingApiException e) {
-    logger.info("Order Api related exception => {}", e.getMessage());
+  public ResponseEntity<AccountingApiException> AccountingApiExceptionHandler(AccountingApiException e) {
+    logger.info("Accounting Api related exception => {}", e.getMessage());
 
     return new ResponseEntity<>(e, HttpStatus.valueOf(e.getHttpStatusCode()));
   }
