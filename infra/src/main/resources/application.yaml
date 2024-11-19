@@ -1,0 +1,41 @@
+server:
+  port: '8080'
+management:
+  server:
+    port: '8081'
+spring:
+  application:
+    name: order-api
+  cloud:
+    config:
+      enabled: false
+  flyway:
+    schemas: ACCOUNTING
+    user: root
+    password: root
+    url: ${FLYWAY_DATASOURCE_URL:jdbc:mysql://accounting-mysql:3307/mysql}
+    enabled: true
+    baseline-on-migrate: true
+  jpa:
+    defer-datasource-initialization: 'false'
+    show-sql: false
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  datasource:
+    password: ACCOUNTING_PASS
+    username: ACCOUNTING_USER
+    url: ${DATASOURCE_URL:jdbc:mysql://accounting-mysql:3307/ACCOUNTING?useSSL=false&allowPublicKeyRetrieval=true}
+  data:
+    redis:
+      host: accounting-redis
+      port: 6379
+      connect-timeout: 60
+      database: 0
+      password: eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+
+accountingManager:
+  defaultMaxCreditLimit:
+    price: ${DEFAULT_MAX_CREDIT_LIMIT:200}

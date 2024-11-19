@@ -1,0 +1,531 @@
+{
+  "info": {
+    "_postman_id": "ad8aa4fd-3c06-444d-b553-7fc4611a40e6",
+    "name": "OpenAPI definition",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "8878741"
+  },
+  "item": [
+    {
+      "name": "v0",
+      "item": [
+        {
+          "name": "managers",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "get Manager By Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/v0/managers/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v0",
+                        "managers",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "<long>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/v0/managers/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v0",
+                            "managers",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": \"<long>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"maxCreditLimit\": \"<number>\",\n  \"usedCreditLimit\": \"<number>\",\n  \"createDate\": \"<dateTime>\",\n  \"updateDate\": \"<dateTime>\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "get Billings By Progress Status",
+                  "request": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "<number>",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/v0/managers/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v0",
+                        "managers",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "<long>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "<number>",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/v0/managers/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v0",
+                            "managers",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": \"<long>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"maxCreditLimit\": \"<number>\",\n  \"usedCreditLimit\": \"<number>\",\n  \"createDate\": \"<dateTime>\",\n  \"updateDate\": \"<dateTime>\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "save Manager",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"H6@S.89C1.qLKP\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/v0/managers",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v0",
+                    "managers"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"email\": \"H6@S.89C1.qLKP\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/v0/managers",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v0",
+                        "managers"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": \"<long>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"maxCreditLimit\": \"<number>\",\n  \"usedCreditLimit\": \"<number>\",\n  \"createDate\": \"<dateTime>\",\n  \"updateDate\": \"<dateTime>\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "billings",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "get Billing By Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/v0/billings/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v0",
+                        "billings",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "<long>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/v0/billings/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v0",
+                            "billings",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": \"<long>\",\n  \"accountingManagerId\": \"<long>\",\n  \"amountDto\": {\n    \"price\": \"<number>\",\n    \"currency\": \"TRY\"\n  },\n  \"productName\": \"<string>\",\n  \"billNo\": \"<string>\",\n  \"progressStatus\": \"NOT_ACCEPTED\",\n  \"createDate\": \"<dateTime>\",\n  \"updateDate\": \"<dateTime>\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "get Billings By Progress Status 1",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v0/billings?progressStatus=SUCCESS&accountingManagerId=<long>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v0",
+                    "billings"
+                  ],
+                  "query": [
+                    {
+                      "key": "progressStatus",
+                      "value": "SUCCESS",
+                      "description": "(Required) "
+                    },
+                    {
+                      "key": "accountingManagerId",
+                      "value": "<long>"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/v0/billings?progressStatus=SUCCESS&accountingManagerId=<long>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v0",
+                        "billings"
+                      ],
+                      "query": [
+                        {
+                          "key": "progressStatus",
+                          "value": "SUCCESS",
+                          "description": "(Required) "
+                        },
+                        {
+                          "key": "accountingManagerId",
+                          "value": "<long>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"billings\": [\n    {\n      \"id\": \"<long>\",\n      \"accountingManagerId\": \"<long>\",\n      \"amountDto\": {\n        \"price\": \"<number>\",\n        \"currency\": \"TRY\"\n      },\n      \"productName\": \"<string>\",\n      \"billNo\": \"<string>\",\n      \"progressStatus\": \"SUCCESS\",\n      \"createDate\": \"<dateTime>\",\n      \"updateDate\": \"<dateTime>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"accountingManagerId\": \"<long>\",\n      \"amountDto\": {\n        \"price\": \"<number>\",\n        \"currency\": \"TRY\"\n      },\n      \"productName\": \"<string>\",\n      \"billNo\": \"<string>\",\n      \"progressStatus\": \"NOT_ACCEPTED\",\n      \"createDate\": \"<dateTime>\",\n      \"updateDate\": \"<dateTime>\"\n    }\n  ]\n}"
+                }
+              ]
+            },
+            {
+              "name": "save Billing",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accountingManagerId\": \"<long>\",\n  \"amount\": {\n    \"price\": \"<number>\",\n    \"currency\": \"TRY\"\n  },\n  \"billNo\": \"<string>\",\n  \"productName\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/v0/billings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v0",
+                    "billings"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"accountingManagerId\": \"<long>\",\n  \"amount\": {\n    \"price\": \"<number>\",\n    \"currency\": \"TRY\"\n  },\n  \"billNo\": \"<string>\",\n  \"productName\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/v0/billings",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v0",
+                        "billings"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": \"<long>\",\n  \"accountingManagerId\": \"<long>\",\n  \"amountDto\": {\n    \"price\": \"<number>\",\n    \"currency\": \"TRY\"\n  },\n  \"productName\": \"<string>\",\n  \"billNo\": \"<string>\",\n  \"progressStatus\": \"NOT_ACCEPTED\",\n  \"createDate\": \"<dateTime>\",\n  \"updateDate\": \"<dateTime>\"\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://0.0.0.0:8080"
+    }
+  ]
+}
